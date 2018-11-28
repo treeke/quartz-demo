@@ -1,0 +1,13 @@
+unet:
+    # 将需要启动的定时程序设置为true
+    scheduler: 
+        collect: true    # Quartz定时采集任务，只有采集进程才开启
+
+        monitor: false    # 缓存管理线程池(定时统计等)，建议在数据处理进程开启
+
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/sinux_unet?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+        username: root
+        password: 123456
+autoStartup: true
